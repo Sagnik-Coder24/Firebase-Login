@@ -29,7 +29,6 @@ function Authen() {
 
   const login = () => {
     setIsLoading(true);
-    console.log(emailRef);
 
     if (emailRef.current === null || passRef.current === null) {
       setIsLoading(false);
@@ -51,7 +50,6 @@ function Authen() {
     promise.catch((error) => {
       setIsLoading(false);
       const err_msg = error.message;
-      console.log("ERROR : " + error.code + " - " + err_msg);
       setErr(err_msg);
     });
   };
@@ -114,7 +112,6 @@ function Authen() {
       .catch((error) => {
         setIsLoading(false);
         const err_msg = error.message;
-        console.log("ERROR : " + error.code + " - " + err_msg);
         setErr(err_msg);
       });
   };
@@ -136,7 +133,6 @@ function Authen() {
         setErr(error.message);
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(`${errorCode} => ${errorMessage}`);
       });
   };
 
@@ -166,7 +162,6 @@ function Authen() {
         setErr(error.message);
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(`${errorCode} => ${errorMessage}`);
       }
     };
 
